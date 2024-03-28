@@ -9,13 +9,13 @@ public class Aluno {
         return media;
     }
     
-    public void calculaAprovacao(){
+    public String calculaAprovacao(){
         if (media()>=7){
-            System.out.println("Aprovado!");
+            return "Aprovado!";
         } else if (media()>=4) {
-            System.out.println("Segunda oportunidade.");
+            return "Segunda oportunidade.";
         }else{
-            System.out.println("Reprovado.");
+            return "Reprovado...";
         }
     }
 
@@ -25,6 +25,7 @@ public class Aluno {
         System.out.println("Nota 2: "+ nota2);
         System.out.println("Nota 3: "+ nota3);
         System.out.println("Media: "+ media());
+        System.out.println("Final: "+ calculaAprovacao());
     }
     public String getNome() {
         return nome;
