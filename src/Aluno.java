@@ -8,6 +8,16 @@ public class Aluno {
         double media=(nota1+nota2+nota3)/3;
         return media;
     }
+    
+    public void calculaAprovacao(){
+        if (media()>=7){
+            System.out.println("Aprovado!");
+        } else if (media()>=4) {
+            System.out.println("Segunda oportunidade.");
+        }else{
+            System.out.println("Reprovado.");
+        }
+    }
 
     public void lista(){
         System.out.println("Nome: "+ nome);
